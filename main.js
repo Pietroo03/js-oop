@@ -17,11 +17,15 @@ class Veicolo {
         return `${this.marca} ${this.anno} ${this.colore}`
     }
 
-    
+    calcEtà() {
+        const date = new Date()
+        const year = date.getFullYear()
+        return `La macchina ha ${year - this.anno} anni`   
+    }
 
 }
 
 const fiat = new Veicolo('Fiat', 2019, 'blu')
-console.log(fiat.informazioni());
+console.log(fiat.informazioni(), fiat.calcEtà());
 
 
